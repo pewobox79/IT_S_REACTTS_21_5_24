@@ -1,0 +1,14 @@
+.header-wrapper{
+    background-color: red;
+    min-height: 150px;
+    height: auto;
+    width: 100%
+}
+
+.border{
+    border: 1px solid yellow
+}
+
+.navWrapper{
+    border: 1px solid green
+}

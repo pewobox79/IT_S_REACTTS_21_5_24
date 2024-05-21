@@ -1,5 +1,5 @@
-const Button = ({text, handler}) => {
-
+const Button = ({ text, handler }) => {
+        
     return <button>
         {text}
     </button>

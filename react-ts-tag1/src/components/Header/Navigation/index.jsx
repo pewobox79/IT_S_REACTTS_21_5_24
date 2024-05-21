@@ -1,4 +1,15 @@
+import {navigation}  from "../../../store/navigation"
+import NavItem from "./NavItem"
+
 export default function Navigation() {
 
-    return <nav><ul><li>Home</li></ul></nav>
+    const NavigationList = navigation.map((item)=>{
+        return <NavItem 
+        key={item.id} {...item} />
+    })
+    return <nav>
+        <ul>
+            {NavigationList}
+        </ul>
+    </nav>
 }
