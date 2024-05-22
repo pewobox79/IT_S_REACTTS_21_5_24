@@ -1,0 +1,28 @@
+// frontend tooling by VITE
+https://vitejs.dev/
+
+// react dev docs
+https://react.dev/
+
+// react router
+https://reactrouter.com/en/main
+
+// formik forms
+https://formik.org/
+
+
+##data requests
+
+//jsonplaceholder
+https://jsonplaceholder.typicode.com/guide/
+
+//fetch method 
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+//axios
+https://axios-http.com/docs/intro
+
+###css styling
+// box shadows
+https://getcssscan.com/css-box-shadow-examples
+
