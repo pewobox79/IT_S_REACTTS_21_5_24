@@ -1,4 +1,5 @@
 
+import { useLocalStorage } from "@/hooks/useLocalStorage"
 import { useState } from "react"
 
 const INIT_VALUES = {
@@ -8,6 +9,8 @@ const INIT_VALUES = {
 
 export default function LoginForm() {
     
+    const {data, setStorageValue, removeStoredValue} = useLocalStorage("ts_user_data")
+    console.log("data local storage", data)
     const [user, setUser]=useState(INIT_VALUES)
     const [submitted, setSubmitted] = useState(false)
 
@@ -21,6 +24,7 @@ export default function LoginForm() {
     function handleSubmit(event:{preventDefault: ()=>void}){
         event.preventDefault()
         console.log("user submitted", user)
+        setStorageValue(user)
         setSubmitted(true)
         setUser(INIT_VALUES)
     }
@@ -48,7 +52,8 @@ export default function LoginForm() {
                 <button type="submit">login</button>
 
             </form>
-            {submitted && <p style={{backgroundColor: "green", color: "black"}}>Data successfully submitted</p>}
+            {submitted && <><p style={{backgroundColor: "green", color: "black"}}>Data successfully submitted</p>
+            <button onClick={()=>removeStoredValue()}>logout</button></>}
         </div>
     )
 }

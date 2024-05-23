@@ -19,8 +19,24 @@ https://jsonplaceholder.typicode.com/guide/
 //fetch method 
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
-//axios
-https://axios-http.com/docs/intro
+## AXIOS 
+https://axios-http.com/docs/example
+
+## protected routes
+https://www.robinwieruch.de/react-router-private-routes/
+
+## React useContext
+https://react.dev/reference/react/useContext
+
+//ZustandJS
+https://zustand-demo.pmnd.rs/
+
+
+//useEffect - complete guide
+https://blog.logrocket.com/useeffect-react-hook-complete-guide/
+
+//useQuery
+https://tanstack.com/query/v5/docs/framework/react/quick-start
 
 ###css styling
 // box shadows

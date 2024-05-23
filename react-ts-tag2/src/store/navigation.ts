@@ -13,5 +13,10 @@ export const navigation = [
         title: "News",
         href: "/news",
         id: "555454"
+    },
+    {
+        title: "User",
+        href: "/user",
+        id: "5554545553342"
     }
 ]

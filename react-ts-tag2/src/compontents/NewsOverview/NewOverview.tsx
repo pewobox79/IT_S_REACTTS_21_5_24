@@ -1,12 +1,15 @@
-import { useEffect, useState } from 'react'
 import NewsItem from './NewsItem'
 import AddArticleForm from '../Forms/AddArticleForm';
+import { useFetch } from '@/hooks/useFetch';
 
 const NewOverview = () => {
 
-    const [articles, setArticles] =useState([]);
+
+    const { data, isLoading, error } = useFetch('https://jsonplaceholder.typicode.com/posts')
+    /* const [articles, setArticles] =useState([]);
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] =useState(false)
+
 
     useEffect(() => {
         setIsLoading(true)
@@ -23,13 +26,10 @@ const NewOverview = () => {
                     setIsError(true)
                 })
         }, 2000)
-
-
-
         
-    }, [])
+    },[]) */
 
-    const ListOfArticles = articles.map((item:{title:string, id: string})=>{
+    const ListOfArticles = data?.map((item:{title:string, id: string})=>{
 
         return <NewsItem key={item.id} title={item.title} id={item.id}/>
     })
@@ -38,7 +38,7 @@ const NewOverview = () => {
         <>
             <AddArticleForm/>
             {isLoading ? <h4>is loading....</h4>: ListOfArticles}
-            {isError && <h2>Irgendwas ist faul</h2>}
+            {error && <h2>Irgendwas ist faul {JSON.stringify(error)}</h2>}
         </>
     )
 }
